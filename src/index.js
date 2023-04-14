@@ -43,23 +43,16 @@ function computeQuantError(p5, oldColor, newColor) {
 function applyQuantError(p5, color, quantError, fraction) {
     return p5.color(p5.red(color) + quantError.r * fraction, p5.green(color) + quantError.g * fraction, p5.blue(color) + quantError.b * fraction);
 }
-// Creating the sketch itself
 var sketch = function (p5) {
-    // The sketch setup method
     var original;
-    //  let originaldithered: Image
     p5.preload = function () {
-        original = p5.loadImage('assets/ev.png');
-        // dithered = p5.loadImage('ev.png');
+        original = p5.loadImage('bernie.png');
     };
     p5.setup = function () {
         p5.createCanvas(2 * original.width, original.height);
-        //  original.filter(p5.GRAY);
         p5.image(original, 0, 0);
     };
-    // The sketch draw method
     p5.draw = function () {
-        // original.copy(dithered, 0, 0, dithered.width, dithered.height,0, 0, dithered.width, dithered.height);
         original.filter(p5.GRAY);
         original.loadPixels();
         for (var x = 0; x < original.width; x++) {
@@ -88,7 +81,7 @@ var sketch = function (p5) {
     };
 };
 new p5_1.default(sketch);
-var Error = /** @class */ (function () {
+var Error = (function () {
     function Error(r, g, b) {
         this.r = r;
         this.g = g;

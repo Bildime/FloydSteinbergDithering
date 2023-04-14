@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "jsx": "preserve",
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "allowJs": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
-    "rootDir": "",
-    "moduleResolution": "node"
-  }
+    "noImplicitAny": true,
+    "esModuleInterop" : true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "rootDir": "src",
+    "sourceMap": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "webpack_config.js"]
 }
