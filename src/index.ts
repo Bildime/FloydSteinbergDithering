@@ -70,7 +70,6 @@ const sketch = (p5: P5) => {
   //  let originaldithered: Image
     p5.preload = () => {
         original = p5.loadImage('bernie.png');
-       // dithered = p5.loadImage('ev.png');
     }
 
     p5.setup = () => {
