@@ -23,7 +23,7 @@ jobs:
       run: npm install
 
     - name: Compile typescript
-      run: npx tsc
+      run:  npx tsc --project tsconfig.json
 
     - name: Build project
       run: npm run build
