@@ -69,7 +69,7 @@ const sketch = (p5: P5) => {
     let original: Image
   //  let originaldithered: Image
     p5.preload = () => {
-        original = p5.loadImage('bernie.png');
+        original = p5.loadImage('assets/bernie.png');
     }
 
     p5.setup = () => {
